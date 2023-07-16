@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    background-image: url(byby.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    position: fixed;
+
+    left: 0;
+    width: 100%;
+    min-width: 100px;
+    padding: 20px 10%;
+    /* 设置导航栏内边距 */
+    background: transparent;
+    /* 设置导航栏背景为透明 */
+    display: flex;
+    /* 将导航栏的子元素设置为flex布局 */
+    justify-content: space-between;
+    /* 将导航栏子元素分散对齐 */
+    align-items: center;
+    /* 将导航栏子元素垂直居中对齐 */
+    z-index: 100;
+    /* 将导航栏设置为最上层 */
+
+}
+.logo {
+    font-size: 35px;
+    /* 设置字体大小 */
+    color: #fff;
+    /* 设置字体颜色 */
+    text-decoration: none;
+    /* 取消下划线 */
+    font-weight: 600;
+    /* 设置字体粗细 */
+    cursor: default;
+    /* 设置鼠标样式为默认 */
+    opacity: 0;
+    /* 设置初始透明度为0 */
+     animation: slideRight 1s ease forwards;
+}
+.navbar a {
+    display: inline-block;
+    /* 将链接设置为块级元素 */
+    font-size: 18px;
+    /* 设置字体大小 */
+    color: #fff;
+    /* 设置字体颜色 */
+    text-decoration: none;
+    /* 取消下划线 */
+    font-weight: 500;
+    /* 设置字体粗细 */
+    margin-left: 35px;
+    /* 设置左侧间距 */
+    opacity: 0;
+    /* 设置初始透明度为0 */
+    transition: 0.3s;
+    /* 设置过渡效果 */
+    animation: slideTop 1s ease forwards;
+    /* 设置动画效果 */
+    animation-delay: calc(.2S * var(--i));
+    /* 设置动画延迟时间 */
+}
+/* 设置导航栏链接的鼠标悬停和点击样式 */
+.navbar a:hover,
+.navbar a:active {
+    color: #b7b2a9;
+    /* 设置字体颜色 */
+}
+.home {
+    position: relative;
+    /* 设置为相对定位，用于子元素定位 */
+    width: 100%;
+    height: 100vh;
+    /* 设置高度为视口高度 */
+    display: flex;
+    /* 将子元素设置为flex布局 */
+    justify-content: space-between;
+    /* 将子元素分散对齐 */
+    align-items: center;
+    /* 将子元素垂直居中对齐 */
+    padding: 70px 10% 0;
+    /* 设置内边距 */
+}
+ /* 设置首页内容的样式 */
+ .home-content {
+    width: 60%;
+   
+    /* 设置最大宽度 */
+}
+
+/* 设置首页标题的样式 */
+.home-content h3 {
+    font-size: 32px;
+    /* 设置字体大小 */
+    font-weight: 700;
+    /* 设置字体粗细 */
+    opacity: 0;
+    /* 设置初始透明度为0 */
+    animation: slideBottom 1s ease forwards;
+    /* 设置动画效果 */
+    animation-delay: .7s;
+    /* 设置动画延迟时间 */
+}
+/* 设置首页标题中的颜色 */
+.home-content h3 span {
+    color: #5780e1;
+}
+
+.text {
+    /* 添加光标效果 */
+    border-right: 2px solid white;
+    /* 添加光标闪烁效果 */
+    animation: blink 0.5s step-end infinite;
+}
+
+/* 设置首页内容标题的样式 */
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    /* 设置下方间距 */
+    animation: slideTop 1s ease forwards;
+    /* 设置动画效果 */
+    animation-delay: .7s;
+    /* 设置动画延迟时间 */
+}
+
+/* 设置首页内容主标题的样式 */
+.home-content h1 {
+    font-size: 56px;
+    /* 设置字体大小 */
+    font-weight: 700;
+    /* 设置字体粗细 */
+    margin: -3px 0;
+    /* 设置上下间距 */
+    opacity: 0;
+    /* 设置初始透明度为0 */
+    animation: slideRight 1s ease forwards;
+    /* 设置动画效果 */
+    animation-delay: 1s;
+    /* 设置动画延迟时间 */
+}
+
+/* 设置首页内容段落的样式 */
+.home-content p {
+    font-size: 18px;
+    /* 设置字体大小 */
+    animation: slideLeft 1s ease forwards;
+    /* 设置动画效果 */
+    animation-delay: .7s;
+    /* 设置动画延迟时间 */
+}
+.home-img{
+    width:35%;
+}
+/* 设置首页图片的样式 */
+.home-img img {
+    max-width: 400px;
+    /* 设置最大宽度 */
+    border-radius: 50%;
+    /* 设置圆角 */
+    margin-right: -20px;
+    /* 设置右侧间距 */
+    box-shadow: 0 0 20px #b7b2a9;
+    /* 设置阴影效果 */
+    opacity: 0;
+    /* 设置初始透明度为0 */
+    animation: zoomIn 1s ease forwards, floatImg 4s ease-in-out infinite;
+    /* 设置动画效果 */
+    animation-delay: 2s 3s;
+    /* 设置动画延迟时间 */
+}
+/* 设置社交媒体图标的样式 */
+.social-media a {
+    display: inline-flex;
+    /* 将链接设置为flex布局 */
+    justify-content: center;
+    /* 将子元素水平居中对齐 */
+    align-items: center;
+    /* 将子元素垂直居中对齐 */
+    width: 40px;
+    /* 设置宽度 */
+    height: 40px;
+    /* 设置高度 */
+    background: transparent;
+    /* 设置背景为透明 */
+    border: 2px solid #b7b2a9;
+    /* 设置边框样式 */
+    color: #b7b2a9;
+    /* 设置字体颜色 */
+    text-decoration: none;
+    /* 取消下划线 */
+    font-size: 20px;
+    /* 设置字体大小 */
+    margin: 30px 15px 30px 0;
+    /* 设置外边距 */
+    transition: 0.5s ease;
+    /* 设置过渡效果 */
+    opacity: 0;
+    /* 设置初始透明度为0 */
+    animation: slideLeft 1s ease forwards;
+    /* 设置动画效果 */
+    animation-delay: calc(0.2s * var(--i));
+    /* 设置动画延迟时间 */
+}
+
+
+
+/* 设置社交媒体图标的鼠标悬停样式 */
+.social-media a:hover {
+    background: #b7b2a9;
+    /* 设置背景颜色 */
+    color: #1f252d;
+    /* 设置字体颜色 */
+    box-shadow: 0 0 20px #b7b2a9;
+    /* 设置阴影效果 */
+}
+
+
+/* 设置按钮的样式 */
+.btn {
+    display: inline-block;
+    /* 将按钮设置为块级元素 */
+    padding: 12px 28px;
+    /* 设置内边距 */
+    background: #b7b2a9;
+    /* 设置背景颜色 */
+    text-decoration: none;
+    /* 取消下划线 */
+    border-radius: 40px;
+    /* 设置边框圆角 */
+    box-shadow: 0 0 10px #b7b2a9;
+    /* 设置阴影效果 */
+    font-size: 16px;
+    /* 设置字体大小 */
+    color: #1f252d;
+    /* 设置字体颜色 */
+    letter-spacing: 1px;
+    /* 设置字间距 */
+    font-weight: 600;
+    /* 设置字体粗细 */
+    transition: 0.5s ease;
+    /* 设置过渡效果 */
+    opacity: 0;
+    /* 设置初始透明度为0 */
+    animation: slideTop 1s ease forwards;
+    /* 设置动画效果 */
+    animation-delay: 2s;
+    /* 设置动画延迟时间 */
+}
+
+
+
+/* 设置按钮的鼠标悬停样式 */
+.btn:hover {
+    box-shadow: 0 0 20px #b7b2a9;
+    /* 设置阴影效果 */
+}
+
+/* 设置按钮的鼠标点击样式 */
+.btn:active {
+    background: none;
+    /* 设置背景为透明 */
+    color: #b7b2a9;
+    /* 设置字体颜色 */
+    border: 2px solid #b7b2a9;
+    /* 设置边框样式 */
+}
+@media screen and (max-width: 400px) {
+    .home-content{width: 100%;}
+    .home-img{width: 100%; -webkit-flex: 1;flex: 1;}
+}
+
+
+/*动画*/
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+        /* 透明边框颜色 */
+    }
+
+    50% {
+        border-color: white;
+        /* 白色边框颜色 */
+    }
+}
+
+/* 定义向右滑动的动画 */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* 定义向左滑动的动画 */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* 定义向上滑动的动画 */
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* 定义向下滑动的动画 */
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* 定义放大的动画 */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 定义图片浮动的动画 */
+@keyframes floatImg {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-36px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
